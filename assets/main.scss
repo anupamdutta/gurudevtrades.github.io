@@ -1,0 +1,42 @@
+---
+---
+
+@import "minima";
+
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap');
+
+/* BASE */
+body {
+  background-color: #0b0f1a;
+  color: #cbd5e1;
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* HEADER */
+.site-header {
+  background-color: #020617;
+  border-bottom: 1px solid #1e293b;
+}
+
+.site-title {
+  color: #38bdf8 !important;
+}
+
+/* TEXT */
+h1, h2, h3 {
+  color: #e2e8f0;
+}
+
+p {
+  color: #94a3b8;
+}
+
+/* LINKS */
+a {
+  color: #38bdf8;
+}
+
+a:hover {
+  color: #0ea5e9;
+}
