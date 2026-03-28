@@ -122,7 +122,8 @@ code {
 .iv-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  row-gap: 20px;
+  column-gap: 40px;
 }
 
 /* INPUTS */
