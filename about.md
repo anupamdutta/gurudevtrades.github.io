@@ -34,6 +34,31 @@ They came from screen time, mistakes, and pressure-tested learning.
 
 ---
 
+### MMR Terminal
+
+I built the **MMR Terminal** as an extension of this research.
+
+It is a risk-adjusted option pricing tool (European style) that internally estimates implied volatility to reflect real market conditions.
+
+Unlike standard models, it focuses on **structural consistency, volatility alignment, and pricing distortions**.
+
+<div style="margin-top:12px;">
+  <a href="/mmr-terminal/"
+     style="
+       background:#020617;
+       border:1px solid #38bdf8;
+       color:#38bdf8;
+       padding:8px 16px;
+       border-radius:6px;
+       text-decoration:none;
+       font-family:monospace;
+       box-shadow:0 0 8px rgba(56,189,248,0.3);
+     ">
+     Explore MMR Terminal →
+  </a>
+</div>
+---
+
 ## Philosophy
 
 I don’t believe in prediction.
