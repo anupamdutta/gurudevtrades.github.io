@@ -10,7 +10,7 @@ layout: home
 
 <div style="display:flex; align-items:center; gap:20px; flex-wrap:wrap; margin-top:20px;">
 
-  <img src="/assets/images/anupam.png"
+  <img src="/assets/anupam.png"
        style="
          width:90px;
          height:90px;
