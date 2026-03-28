@@ -46,66 +46,24 @@ permalink: /iv-finder/
 
 </div>
 <script>
+async function runIV() {
+  const data = {
+    spot: document.getElementById("spot").value,
+    strike: document.getElementById("strike").value,
+    dte: document.getElementById("dte").value,
+    price: document.getElementById("price").value,
+    type: document.getElementById("type").value.toLowerCase()
+  };
 
-function normCDF(x) {
-  return (1 + erf(x / Math.sqrt(2))) / 2;
-}
+  const res = await fetch("https://script.google.com/macros/s/AKfycbyCLcqtV8YiPbuizHVQdaRhMmlI1LCZS6Z8qmo0XRslg9SY8kU9VtHVWdJ39AGcYlhM1g/exec", {
+    method: "POST",
+    body: JSON.stringify(data)
+  });
 
-function erf(x) {
-  let sign = (x >= 0) ? 1 : -1;
-  x = Math.abs(x);
-
-  let a1 = 0.254829592, a2 = -0.284496736,
-      a3 = 1.421413741, a4 = -1.453152027,
-      a5 = 1.061405429, p = 0.3275911;
-
-  let t = 1.0 / (1.0 + p * x);
-  let y = 1.0 - (((((a5 * t + a4) * t) + a3) * t + a2) * t + a1)
-      * t * Math.exp(-x * x);
-
-  return sign * y;
-}
-
-function blackScholes(S, K, T, r, sigma, type) {
-  let d1 = (Math.log(S/K) + (r + 0.5*sigma*sigma)*T) / (sigma*Math.sqrt(T));
-  let d2 = d1 - sigma*Math.sqrt(T);
-
-  if (type === "call") {
-    return S*normCDF(d1) - K*Math.exp(-r*T)*normCDF(d2);
-  } else {
-    return K*Math.exp(-r*T)*normCDF(-d2) - S*normCDF(-d1);
-  }
-}
-
-function vega(S, K, T, r, sigma) {
-  let d1 = (Math.log(S/K) + (r + 0.5*sigma*sigma)*T) / (sigma*Math.sqrt(T));
-  return S * Math.sqrt(T) * (1/Math.sqrt(2*Math.PI)) * Math.exp(-0.5*d1*d1);
-}
-
-function calcIV() {
-
-  let S = parseFloat(document.getElementById("spot").value);
-  let K = parseFloat(document.getElementById("strike").value);
-  let T = parseFloat(document.getElementById("dte").value) / 365;
-  let marketPrice = parseFloat(document.getElementById("price").value);
-  let type = document.getElementById("type").value;
-
-  let r = 0.09;
-  let sigma = 0.2;
-
-  for (let i = 0; i < 100; i++) {
-    let price = blackScholes(S, K, T, r, sigma, type);
-    let v = vega(S, K, T, r, sigma);
-
-    let diff = price - marketPrice;
-
-    if (Math.abs(diff) < 0.0001) break;
-
-    sigma = sigma - diff / v;
-  }
+  const json = await res.json();
 
   document.getElementById("result").innerText =
-    "IV = " + (sigma * 100).toFixed(2) + "%";
+    "IV = " + json.iv.toFixed(2) + "%";
 }
 
 </script>
