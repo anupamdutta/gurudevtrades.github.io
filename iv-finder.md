@@ -90,7 +90,7 @@ function calcIV() {
   let marketPrice = parseFloat(document.getElementById("price").value);
   let type = document.getElementById("type").value;
 
-  let r = 0.05;
+  let r = 0.09;
   let sigma = 0.2;
 
   for (let i = 0; i < 100; i++) {
