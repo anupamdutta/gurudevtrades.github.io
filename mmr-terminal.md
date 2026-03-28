@@ -53,11 +53,11 @@ to produce a structurally valid volatility surface.
 ## Interface Preview
 
 <div style="text-align:center;">
-  <img src="/assets/images/mmr-terminal-cover.png" width="800">
+  <img src="/assets/mmr-terminal-cover.png" width="800">
 </div>
 
 <div style="text-align:center;">
-  <img src="/assets/images/mmr-terminal-ui.png" width="800">
+  <img src="/assets/mmr-terminal-ui.png" width="800">
 </div>
 
 ---
