@@ -57,6 +57,7 @@ Unlike standard models, it focuses on **structural consistency, volatility align
      Explore MMR Terminal →
   </a>
 </div>
+<br>
 ---
 
 ## Philosophy
