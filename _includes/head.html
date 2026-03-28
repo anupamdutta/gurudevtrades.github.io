@@ -1,0 +1,57 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- 🔥 PRIMARY SEO -->
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="Quant research on volatility, gamma positioning, and option pricing. GammaGrid Insights by Anupam Dutta.">
+  <meta name="keywords" content="Options Trading, Implied Volatility, Gamma, Nifty Options, Quant Trading, Option Pricing, GammaGrid, MMR Terminal, Option Chain Analysis Anupam Dutta, lynqverse research">
+  <meta name="author" content="Anupam Dutta">
+
+  <!-- 🔗 CANONICAL -->
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+
+  <!-- 📱 FAVICON -->
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+
+  <!-- 🎨 STYLES -->
+  <link rel="stylesheet" href="{{ "/assets/main.scss" | relative_url }}">
+
+  <!-- 📣 OPEN GRAPH (Facebook, LinkedIn) -->
+  <meta property="og:title" content="{{ page.title }} | GammaGrid Insights">
+  <meta property="og:description" content="Quant research on volatility, gamma positioning, and option pricing.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ "/assets/anupam.png" | absolute_url }}">
+  <meta property="og:site_name" content="GammaGrid Insights">
+
+  <!-- 🐦 TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title }} | GammaGrid Insights">
+  <meta name="twitter:description" content="Volatility, Gamma, and Market Structure Research">
+  <meta name="twitter:image" content="{{ "/assets/anupam.png" | absolute_url }}">
+
+  <!-- ⚡ PERFORMANCE -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+  <!-- 🔍 STRUCTURED DATA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "GammaGrid Insights",
+    "url": "{{ site.url }}",
+    "author": {
+      "@type": "Person",
+      "name": "Anupam Dutta"
+    },
+    "description": "Quant research on volatility, gamma positioning, and option pricing."
+  }
+  </script>
+
+  <!-- ✅ JEKYLL SEO (keep this LAST) -->
+  {% seo %}
+  {% feed_meta %}
+</head>
