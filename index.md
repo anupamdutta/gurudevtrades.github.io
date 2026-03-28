@@ -8,6 +8,33 @@ layout: home
 
 ---
 
+## Hello,
+
+I am Anupam Dutta.
+
+I work on volatility structure, gamma positioning, and systematic option pricing.
+
+You can follow my thoughts on Threads:  
+👉 @gammagrid
+
+<div style="margin-top:15px;">
+  <a href="/about/"
+     style="
+       background:#020617;
+       border:1px solid #38bdf8;
+       color:#38bdf8;
+       padding:8px 16px;
+       border-radius:6px;
+       text-decoration:none;
+       font-family:monospace;
+       box-shadow:0 0 8px rgba(56,189,248,0.3);
+     ">
+     Read More →
+  </a>
+</div>
+
+---
+
 ## What I actually study
 
 I don’t predict direction.  
